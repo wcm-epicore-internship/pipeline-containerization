@@ -13,9 +13,9 @@ Configuring bioinformatics pipelines to run in containers provides portability a
 1. Collate test data set
 1. Run (non-containerized) pipeline test data set on 2 or more different machines
 1. Compare output, run time, resource use, etc
-1. Configure pipeline to run in container, including scripts for set u p and management
+1. Configure pipeline to run in container, including scripts for set up and management
 1. Run containerized pipeline on the same machines
 1. Compare output, run time, resource use, etc
-1. Run containerized pipeline int he cloud
+1. Run containerized pipeline in the cloud
 1. Compare output, run time, resource use, etc
 1. Chart and report comparisons
