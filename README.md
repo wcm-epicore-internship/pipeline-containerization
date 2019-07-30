@@ -22,4 +22,5 @@ Configuring bioinformatics pipelines to run in containers provides portability a
 
 ### Notes
 Examples of SCU supported singularity containers: https://scu-git.med.cornell.edu/git/scu-singularity
+
 STAR aligner: https://github.com/alexdobin/STAR
