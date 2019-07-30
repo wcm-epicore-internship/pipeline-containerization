@@ -10,7 +10,7 @@ Configuring bioinformatics pipelines to run in containers provides portability a
 ### Road map
 1. Research: Containers vs Virtual Machines, Containers vs Java Virtual Machine, Docker vs Singularity, strengths and weaknesses, use cases.
 1. Download the star-aligner pipeline for post processing of RNASeq data (from gitlab), and get familiar with the tools/ dependencies and system requirements: https://scu-git.med.cornell.edu/git/luce/star-aligner
-1. Collate test data set
+1. Collate test data set - Download raw data from our data portal PubShare (https://abc.med.cornell.edu/pubshare) - use Project EC-DB-1675.
 1. Run (non-containerized) pipeline test data set on 2 or more different machines
 1. Compare output, run time, resource use, etc
 1. Configure pipeline to run in container, including scripts for set up and management
