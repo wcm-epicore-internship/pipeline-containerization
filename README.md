@@ -8,8 +8,8 @@ A container is a standard unit of software that packages up code and all its dep
 Configuring bioinformatics pipelines to run in containers provides portability and scalability to the software system.
 
 ### Road map
-1. Research: Containers vs Virtual Machines, Containers vs Java Virtual Machine, Docker vs Singularity, strengths and weaknesses, use cases
-1. Select target pipeline for project, run and get familiar with IO
+1. Research: Containers vs Virtual Machines, Containers vs Java Virtual Machine, Docker vs Singularity, strengths and weaknesses, use cases.
+1. Download the star-aligner pipeline for post processing of RNASeq data (from gitlab), and get familiar with the tools/ dependencies and system requirements: https://scu-git.med.cornell.edu/git/luce/star-aligner
 1. Collate test data set
 1. Run (non-containerized) pipeline test data set on 2 or more different machines
 1. Compare output, run time, resource use, etc
@@ -19,3 +19,6 @@ Configuring bioinformatics pipelines to run in containers provides portability a
 1. Run containerized pipeline in the cloud
 1. Compare output, run time, resource use, etc
 1. Chart and report comparisons
+
+### Notes
+Examples of SCU supported singularity containers: https://scu-git.med.cornell.edu/git/scu-singularity
