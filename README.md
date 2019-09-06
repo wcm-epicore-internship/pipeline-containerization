@@ -24,3 +24,48 @@ Configuring bioinformatics pipelines to run in containers provides portability a
 Examples of SCU supported singularity containers: https://scu-git.med.cornell.edu/git/scu-singularity
 
 STAR aligner: https://github.com/alexdobin/STAR
+
+
+
+## Getting started with Singularity
+
+1. create a recipe file eg star.srec
+
+```
+bootstrap: docker
+From: centos:7
+
+%post
+	yum -y update
+	yum -y install wget git gzip bzip2 gcc gcc-c++ make zlib-devel epel-release
+	yum -y install python-pip
+	cd /
+  echo "Hello Simon" > hello_simon.txt
+	wget https://github.com/alexdobin/STAR/archive/STAR_2.3.1z9.tar.gz
+	tar -xzf STAR_2.3.1z9.tar.gz
+	cd STAR_2.3.1z9/source
+	make
+	
+%environment
+	export PATH=$PATH:/STAR_2.3.1z9/source
+```
+
+2. Build the image
+
+```
+sudo singularity build star.simg star.srec
+```
+
+3. Connect and check star runs
+```
+sudo singularity shell star.simg
+```
+
+4. Run the star pipeline
+eg https://github.com/STAR-Fusion/STAR-Fusion/wiki
+
+The object is to run the star program by itself (not the whole pipieline) with a sample fastq file
+
+Once this is working we weill start adding other components of the star pipeline
+
+
