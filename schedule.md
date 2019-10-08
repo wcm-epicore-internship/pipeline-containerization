@@ -73,6 +73,8 @@ cd /scratch001/epiapps/shaina
 ```
 **Note: if wrong password is used 3 times account is locked out so take care to use correct password** 
 
+## Watch Simple git overview
+https://www.youtube.com/watch?v=9GKpbI1siow
 
 ## Vscode & Git
 * Download Visual Studio Code onto your laptop
