@@ -53,8 +53,8 @@ STAR
 Pass1
 
 ```cd STAR_bio
-/home/shaina/STAR_bio/STAR-2.7.1a/bin/Linux_x86_64_static/STAR --genomeDir Data/mygenomedir/ --runMode genomeGenerate  --genomeFastaFiles referenceGenomes/gencode.vM22.transcripts.fa --limitGenomeGenerateRAM 6220135808  --genomeSAsparseD 3 --genomeSAindexNbases 12 -- genomeChrBinNbits 14
-/home/shaina/STAR_bio/STAR-2.7.1a/bin/Linux_x86_64_static/STAR --genomeDir Data/mygenomedir/  --readFilesIn Data/HA_KO_high_NoIndex_L006_R1_001.fastq 
+/home/username/STAR_bio/STAR-2.7.1a/bin/Linux_x86_64_static/STAR --genomeDir Data/mygenomedir/ --runMode genomeGenerate  --genomeFastaFiles referenceGenomes/gencode.vM22.transcripts.fa --limitGenomeGenerateRAM 6220135808  --genomeSAsparseD 3 --genomeSAindexNbases 12 -- genomeChrBinNbits 14
+/home/username/STAR_bio/STAR-2.7.1a/bin/Linux_x86_64_static/STAR --genomeDir Data/mygenomedir/  --readFilesIn Data/HA_KO_high_NoIndex_L006_R1_001.fastq 
 ```
 
 Pass2
