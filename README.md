@@ -66,4 +66,56 @@ b)	.fastq should be in the directory
 
 c)	Directory DATA/genomdir should exist 
 
+### Recipe file for Flexbar
 
+    yum -y install xz-devel
+    yum -y install cmake
+    yum -y install unzip
+    cd /
+    wget http://packages.seqan.de/seqan-library/seqan-library-1.4.2.tar.bz2
+    tar -xvjf seqan-library-1.4.2.tar.bz2
+
+    wget https://github.com/seqan/flexbar/archive/v2.4.0.tar.gz
+    tar xvzf v2.4.0.tar.gz
+    mv seqan-library-1.4.2/include flexbar-2.4.0
+
+    wget https://github.com/intel/tbb/archive/tbb_2019.zip
+    unzip tbb_2019.zip
+    cd tbb-tbb_2019
+    gmake
+    cp -R include/tbb ../flexbar-2.4.0/include/
+    cd /
+    cd flexbar-2.4.0
+    cmake .
+    export LD_LIBRARY_PATH=/YourPath/flexbar-master-linux:$LD_LIBRARY_PATH
+
+%environment
+    export PATH=$PATH:/samtools-1.9
+### Recipe for Samtools
+
+bootstrap: docker
+ 2 From: centos:7
+ 3
+ 4 %post
+ 5     yum -y update
+ 6     yum -y install wget git gzip bzip2 gcc gcc-c++ make zlib-devel epel-release
+ 7     yum -y install python-pip
+ 8     cd /
+ 9     wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+ 10     bzip2 -d samtools-1.9.tar.bz2
+ 11     tar -xf samtools-1.9.tar
+ 12     cd samtools-1.9/
+ 13     ./configure --without-curses
+ 14     make
+ 15     make install
+ 16
+ 17 %environment
+ 18     export PATH=$PATH:/samtools-1.9
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
