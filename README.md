@@ -88,9 +88,9 @@ c)	Directory DATA/genomdir should exist
     cd flexbar-2.4.0
     cmake .
     export LD_LIBRARY_PATH=/YourPath/flexbar-master-linux:$LD_LIBRARY_PATH
-
-%environment
+    %environment
     export PATH=$PATH:/samtools-1.9
+    ...
     
     
 ### Recipe for Samtools
