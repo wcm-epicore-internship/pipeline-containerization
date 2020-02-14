@@ -90,7 +90,6 @@ c)	Directory DATA/genomdir should exist
     export LD_LIBRARY_PATH=/YourPath/flexbar-master-linux:$LD_LIBRARY_PATH
     %environment
     export PATH=$PATH:/samtools-1.9
-    ...
     
     
 ### Recipe for Samtools
