@@ -91,6 +91,7 @@ c)	Directory DATA/genomdir should exist
 
 %environment
     export PATH=$PATH:/samtools-1.9
+    
 ### Recipe for Samtools
 
 bootstrap: docker
