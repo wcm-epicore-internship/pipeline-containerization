@@ -94,7 +94,7 @@ c)	Directory DATA/genomdir should exist
     
 ### Recipe for Samtools
 
-bootstrap: docker
+```bootstrap: docker
  2 From: centos:7
  3
  4 %post
@@ -112,7 +112,7 @@ bootstrap: docker
  16
  17 %environment
  18     export PATH=$PATH:/samtools-1.9
- 
+ ```
  
  
  
