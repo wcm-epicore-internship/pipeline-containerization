@@ -99,23 +99,23 @@ c)	Directory DATA/genomdir should exist
 ### Recipe for Samtools
 
 ```bootstrap: docker
- 2 From: centos:7
- 3
- 4 %post
- 5     yum -y update
- 6     yum -y install wget git gzip bzip2 gcc gcc-c++ make zlib-devel epel-release
- 7     yum -y install python-pip
- 8     cd /
- 9     wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
- 10     bzip2 -d samtools-1.9.tar.bz2
- 11     tar -xf samtools-1.9.tar
- 12     cd samtools-1.9/
- 13     ./configure --without-curses
- 14     make
- 15     make install
- 16
- 17 %environment
- 18     export PATH=$PATH:/samtools-1.9
+  From: centos:7
+ 
+  %post
+      yum -y update
+      yum -y install wget git gzip bzip2 gcc gcc-c++ make zlib-devel epel-release
+      yum -y install python-pip
+      cd /
+      wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+      bzip2 -d samtools-1.9.tar.bz2
+      tar -xf samtools-1.9.tar
+      cd samtools-1.9/
+      ./configure --without-curses
+      make
+      make install
+ 
+  %environment
+      export PATH=$PATH:/samtools-1.9
  ```
  
  
