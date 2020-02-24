@@ -59,6 +59,10 @@ Pass1
 
 Pass2
 
+```
+STAR --genomeDir Data/mygenomedir/ --readFilesIn  Data/Sample_HA_KO_high/HA_KO_high_NoIndex_L006_R1_001.fastq.gz --limitGenomeGenerateRAM 99431595392 --runThreadN 12
+```
+
 ### File infrastructure in the host file system:
 a)	.fasta should be in the directory
 
