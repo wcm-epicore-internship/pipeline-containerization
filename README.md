@@ -29,7 +29,9 @@ Singularity is the containerization software, designed for the scientific purpos
 
 ### How to build a container?
 Use the command Build
-////////////////////////////////////////
+```
+$ sudo singularity build --writable lolcow.img shub://GodloveD/lolcow
+```
 
 ### Run container 
 we don't need sudo, so just $ singularity <command> should work
